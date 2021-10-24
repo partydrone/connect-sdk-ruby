@@ -8,17 +8,16 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Andrew Porter"]
   spec.email         = ["partydrone@icloud.com"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A Ruby SDK for the 1Password Connect API."
+  spec.description   = "A Ruby SDK for the 1Password Connect API. 1Password Connect API documentation can be found at https://support.1password.com/connect-api-reference/"
+  spec.homepage      = "https://github.com/partydrone/connect-sdk-ruby"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.4.0"
+  spec.required_ruby_version = ">= 2.5.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
+  # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/partydrone/connect-sdk-ruby"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
