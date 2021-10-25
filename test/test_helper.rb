@@ -19,7 +19,7 @@ SimpleCov.start do
 end
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "connect"
+require "op_connect"
 require "minitest/autorun"
 require "minitest/reporters"
 require "faraday"
@@ -34,7 +34,7 @@ class Minitest::Test
 
   def stub_request(method, path, response:, body: {})
     Faraday::Adapter::Test::Stubs.new do |stub|
-      arguments = [method, "/crm/rest/v1/#{path}"]
+      arguments = [method, "/v1/#{path}"]
       arguments << body.to_json if [:post, :put, :patch].include?(method)
       stub.send(*arguments) { |env| response }
     end

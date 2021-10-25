@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/connect/version"
+require_relative "lib/op_connect/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "connect"
-  spec.version = Connect::VERSION
+  spec.name = "op_connect"
+  spec.version = OpConnect::VERSION
   spec.authors = ["Andrew Porter"]
   spec.email = ["partydrone@icloud.com"]
 
