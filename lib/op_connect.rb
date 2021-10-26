@@ -8,7 +8,10 @@ require "faraday_middleware"
 module OpConnect
   autoload :Client, "op_connect/client"
   autoload :Configurable, "op_connect/configurable"
+  autoload :Connection, "op_connect/connection"
   autoload :Default, "op_connect/default"
+  autoload :Error, "op_connect/error"
+  autoload :Response, "op_connect/response"
 
   class << self
     include OpConnect::Configurable

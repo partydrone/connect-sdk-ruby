@@ -1,6 +1,7 @@
 module OpConnect
   class Client
     include OpConnect::Configurable
+    include OpConnect::Connection
 
     def initialize(options = {})
       OpConnect::Configurable.keys.each do |key|
@@ -13,6 +14,9 @@ module OpConnect
       inspected = super
       inspected.gsub!(@access_token, "#{"*" * 24}#{@access_token[24..]}") if @access_token
       inspected
+    end
+
+    def heartbeat
     end
   end
 end
