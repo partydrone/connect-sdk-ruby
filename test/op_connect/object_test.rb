@@ -1,21 +1,24 @@
 require "test_helper"
 
-class ObjectTest < Minitest::Test
-  def test_creating_object_from_hash
-    assert_equal "bar", OpConnect::Object.new(foo: "bar").foo
+describe OpConnect::Object do
+  subject { OpConnect::Object }
+
+  it "creates an object from a hash" do
+    _(subject.new(foo: "bar").foo).must_equal "bar"
   end
 
-  def test_nested_hash
-    assert_equal "foobar", OpConnect::Object.new(foo: {bar: {baz: "foobar"}}).foo.bar.baz
+  it "handles nested hashes" do
+    _(subject.new(foo: {bar: {baz: "foobar"}}).foo.bar.baz).must_equal "foobar"
   end
 
-  def test_nested_number
-    assert_equal 1, OpConnect::Object.new(foo: {bar: 1}).foo.bar
+  it "handles nested numbers" do
+    _(subject.new(foo: {bar: 1}).foo.bar).must_equal 1
   end
 
-  def test_array
-    object = OpConnect::Object.new(foo: [{bar: :baz}])
-    assert_equal OpenStruct, object.foo.first.class
-    assert_equal :baz, object.foo.first.bar
+  it "handles nested arrays" do
+    object = subject.new(foo: [{bar: :baz}])
+
+    _(object.foo.first).must_be_kind_of OpenStruct
+    _(object.foo.first.bar).must_equal :baz
   end
 end
