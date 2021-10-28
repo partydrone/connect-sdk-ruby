@@ -1,6 +1,3 @@
-require "faraday"
-require "op_connect/error"
-
 module OpConnect
   # Faraday response middleware
   #

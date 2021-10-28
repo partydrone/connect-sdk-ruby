@@ -10,8 +10,19 @@ module OpConnect
   autoload :Configurable, "op_connect/configurable"
   autoload :Connection, "op_connect/connection"
   autoload :Default, "op_connect/default"
-  autoload :Error, "op_connect/error"
+  autoload :Object, "op_connect/object"
   autoload :Response, "op_connect/response"
+
+  autoload :Error, "op_connect/error"
+  autoload :ClientError, "op_connect/error"
+  autoload :BadRequest, "op_connect/error"
+  autoload :Forbidden, "op_connect/error"
+  autoload :NotFound, "op_connect/error"
+  autoload :PayloadTooLarge, "op_connect/error"
+  autoload :Unauthorized, "op_connect/error"
+  autoload :ServerError, "op_connect/error"
+  autoload :InternalServerError, "op_connect/error"
+  autoload :ServiceUnavailable, "op_connect/error"
 
   class << self
     include OpConnect::Configurable

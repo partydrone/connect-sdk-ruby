@@ -16,7 +16,7 @@ module OpConnect
       inspected
     end
 
-    def heartbeat
+    def health
     end
   end
 end

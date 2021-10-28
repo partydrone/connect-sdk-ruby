@@ -76,7 +76,7 @@ describe OpConnect::Client do
 
       _(client.last_response).must_be_nil
 
-      client.heartbeat
+      client.health
 
       _(client.last_response.status).must_equal 200
     end

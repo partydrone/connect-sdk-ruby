@@ -1,0 +1,15 @@
+{
+  "name": "1Password Connect API",
+  "version": "1.2.1",
+  "dependencies": [
+    {
+      "service": "sync",
+      "status": "TOKEN_NEEDED"
+    },
+    {
+      "service": "sqlite",
+      "status": "ACTIVE",
+      "message": "Connected to  ~/1password.sqlite"
+    }
+  ]
+}
