@@ -12,7 +12,7 @@ module OpConnect
 
     def inspect
       inspected = super
-      inspected.gsub!(@access_token, "#{"*" * 24}#{@access_token[24..]}") if @access_token
+      inspected.gsub!(@access_token, "#{"*" * 24}") if @access_token
       inspected
     end
 

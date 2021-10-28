@@ -77,9 +77,6 @@ module OpConnect
 
         http.response :dates
         http.response :json, content_type: "application/json"
-        http.response :logger do |logger|
-          logger.filter(/(Bearer) (\w+)/, '\1 [FILTERED]')
-        end
 
         http.adapter adapter, @stubs
       end
