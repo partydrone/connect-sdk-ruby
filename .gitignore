@@ -8,3 +8,4 @@
 /test/coverage/
 /tmp/
 Gemfile.lock
+1password-credentials.json
