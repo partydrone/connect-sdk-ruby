@@ -24,6 +24,9 @@ module OpConnect
   autoload :InternalServerError, "op_connect/error"
   autoload :ServiceUnavailable, "op_connect/error"
 
+  # Classes used to return a nicer object wrapping the response.
+  autoload :Vault, "op_connect/vault"
+
   class << self
     include OpConnect::Configurable
 

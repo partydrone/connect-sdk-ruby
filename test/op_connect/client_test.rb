@@ -71,75 +71,85 @@ describe OpConnect::Client do
   describe ".last_response" do
     it "caches the last agent response" do
       OpConnect.reset!
-      stub = stub_request(:get, "heartbeat", response: stub_response(fixture: "heartbeat/response"))
+
+      stub = Faraday::Adapter::Test::Stubs.new
+      stub.get("/v1/heartbeat") { [200, {}, ""] }
       client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
 
       _(client.last_response).must_be_nil
 
-      client.health
+      client.get("heartbeat")
 
       _(client.last_response.status).must_equal 200
     end
   end
 
   describe ".get" do
+    let(:stubs) { Faraday::Adapter::Test::Stubs.new }
+
     before do
       OpConnect.reset!
     end
 
-    # it "handles query params" do
-    #   stub = stub_request(:get, "heartbeat", response: stub_response(fixture: "heartbeat/response"))
-    # end
+    it "handles query params" do
+      stubs.get("/heartbeat?foo=bar") do |env|
+        _(env.url.query).must_equal "foo=bar"
+        [200, {}, ""]
+      end
+    end
+
+    it "handles headers"
+  end
+
+  describe "when making requests" do
+    it "sets a deafult user agent"
+    it "sets a custom user agent"
   end
 
   describe "error handling" do
-    it "raises on 400" do
-      stub = stub_request(:get, "whatever", response: stub_response(status: 400, fixture: "errors/400"))
-      client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
+    let(:stubs) { Faraday::Adapter::Test::Stubs.new }
+    let(:client) { subject.new(access_token: "fake", adapter: :test, stubs: stubs) }
 
-      _ { client.connection.get("whatever") }.must_raise OpConnect::BadRequest
+    it "raises on 400" do
+      stubs.get("/v1/whatever") { [400, {}, ""] }
+
+      _ { client.get("whatever") }.must_raise OpConnect::BadRequest
     end
 
     it "raises on 401" do
-      stub = stub_request(:get, "who_are_you", response: stub_response(status: 401, fixture: "errors/401"))
-      client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
+      stubs.get("/v1/who_are_you") { [401, {}, ""] }
 
-      _ { client.connection.get("who_are_you") }.must_raise OpConnect::Unauthorized
+      _ { client.get("who_are_you") }.must_raise OpConnect::Unauthorized
     end
 
     it "raises on 403" do
-      stub = stub_request(:get, "nope", response: stub_response(status: 403, fixture: "errors/403"))
-      client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
+      stubs.get("/v1/nope") { [403, {}, ""] }
 
-      _ { client.connection.get("nope") }.must_raise OpConnect::Forbidden
+      _ { client.get("nope") }.must_raise OpConnect::Forbidden
     end
 
     it "raises on 404" do
-      stub = stub_request(:get, "what", response: stub_response(status: 404, fixture: "errors/404"))
-      client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
+      stubs.get("/v1/not_found") { [404, {}, ""] }
 
-      _ { client.connection.get("what") }.must_raise OpConnect::NotFound
+      _ { client.get("not_found") }.must_raise OpConnect::NotFound
     end
 
     it "raises on 413" do
-      stub = stub_request(:get, "say_again", response: stub_response(status: 413, fixture: "errors/413"))
-      client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
+      stubs.get("/v1/too_big") { [413, {}, ""] }
 
-      _ { client.connection.get("say_again") }.must_raise OpConnect::PayloadTooLarge
+      _ { client.get("too_big") }.must_raise OpConnect::PayloadTooLarge
     end
 
     it "raises on 500" do
-      stub = stub_request(:get, "boom", response: stub_response(status: 500, fixture: "errors/500"))
-      client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
+      stubs.get("/v1/server_error") { [500, {}, ""] }
 
-      _ { client.connection.get("boom") }.must_raise OpConnect::InternalServerError
+      _ { client.get("server_error") }.must_raise OpConnect::InternalServerError
     end
 
     it "raises on 503" do
-      stub = stub_request(:get, "hmm", response: stub_response(status: 503, fixture: "errors/503"))
-      client = subject.new(access_token: "fake", adapter: :test, stubs: stub)
+      stubs.get("/v1/service_unavailable") { [503, {}, ""] }
 
-      _ { client.connection.get("hmm") }.must_raise OpConnect::ServiceUnavailable
+      _ { client.get("service_unavailable") }.must_raise OpConnect::ServiceUnavailable
     end
   end
 end
