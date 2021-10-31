@@ -111,31 +111,31 @@ describe OpConnect::Client do
     let(:client) { subject.new(access_token: "fake", adapter: :test, stubs: stubs) }
 
     it "raises on 400" do
-      stubs.get("/v1/whatever") { [400, {}, ""] }
+      stubs.get("/v1/whatever") { [400, {"Content-Type": "application/json"}, fixture("errors/400.json")] }
 
       _ { client.get("whatever") }.must_raise OpConnect::BadRequest
     end
 
     it "raises on 401" do
-      stubs.get("/v1/who_are_you") { [401, {}, ""] }
+      stubs.get("/v1/who_are_you") { [401, {"Content-Type": "application/json"}, fixture("errors/401.json")] }
 
       _ { client.get("who_are_you") }.must_raise OpConnect::Unauthorized
     end
 
     it "raises on 403" do
-      stubs.get("/v1/nope") { [403, {}, ""] }
+      stubs.get("/v1/nope") { [403, {"Content-Type": "application/json"}, fixture("errors/403.json")] }
 
       _ { client.get("nope") }.must_raise OpConnect::Forbidden
     end
 
     it "raises on 404" do
-      stubs.get("/v1/not_found") { [404, {}, ""] }
+      stubs.get("/v1/not_found") { [404, {"Content-Type": "application/json"}, fixture("errors/404.json")] }
 
       _ { client.get("not_found") }.must_raise OpConnect::NotFound
     end
 
     it "raises on 413" do
-      stubs.get("/v1/too_big") { [413, {}, ""] }
+      stubs.get("/v1/too_big") { [413, {"Content-Type": "application/json"}, fixture("errors/413.json")] }
 
       _ { client.get("too_big") }.must_raise OpConnect::PayloadTooLarge
     end

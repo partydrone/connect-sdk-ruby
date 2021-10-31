@@ -26,6 +26,7 @@ module OpConnect
 
   # Classes used to return a nicer object wrapping the response.
   autoload :Vault, "op_connect/vault"
+  autoload :Item, "op_connect/item"
 
   class << self
     include OpConnect::Configurable

@@ -1,0 +1,78 @@
+{
+  "id": "2fcbqwe9ndg175zg2dzwftvkpa",
+  "title": "Secrets Automation Item",
+  "tags": ["connect", "\ud83d\udc27"],
+  "vault": {
+    "id": "ftz4pm2xxwmwrsd7rjqn7grzfz"
+  },
+  "category": "LOGIN",
+  "sections": [
+    {
+      "id": "95cdbc3b-7742-47ec-9056-44d6af82d562",
+      "label": "Security Questions"
+    }
+  ],
+  "fields": [
+    {
+      "id": "username",
+      "type": "STRING",
+      "purpose": "USERNAME",
+      "label": "username",
+      "value": "wendy"
+    },
+    {
+      "id": "password",
+      "type": "CONCEALED",
+      "purpose": "PASSWORD",
+      "label": "password",
+      "value": "hLDegPkuMQqyQiyDZqRdWGoojiN5KYQtXuA0wBDe9z3Caj6FQGHpbGu",
+      "entropy": 189.78359985351562
+    },
+    {
+      "id": "notesPlain",
+      "type": "STRING",
+      "purpose": "NOTES",
+      "label": "notesPlain"
+    },
+    {
+      "id": "a6cvmeqakbxoflkgmor4haji7y",
+      "type": "URL",
+      "label": "Example",
+      "value": "https://example.com"
+    },
+    {
+      "id": "boot3vsxwhuht6g7cmcx4m6rcm",
+      "section": {
+        "id": "95cdbc3b-7742-47ec-9056-44d6af82d562"
+      },
+      "type": "CONCEALED",
+      "label": "Recovery Key",
+      "value": "s=^J@GhHP_isYP>LCq?vv8u7T:*wBP.c"
+    },
+    {
+      "id": "axwtgyjrvwfp5ij7mtkw2zvijy",
+      "section": {
+        "id": "95cdbc3b-7742-47ec-9056-44d6af82d562"
+      },
+      "type": "STRING",
+      "label": "Random Text",
+      "value": "R)D~KZdV!8?51QoCibDUse7=n@wKR_}]"
+    }
+  ],
+  "files": [
+    {
+      "id": "6r65pjq33banznomn7q22sj44e",
+      "name": "testfile.txt",
+      "size": 35,
+      "content_path": "v1/vaults/ftz4pm2xxwmwrsd7rjqn7grzfz/items/2fcbqwe9ndg175zg2dzwftvkpa/files/6r65pjq33banznomn7q22sj44e/content"
+    },
+    {
+      "id": "oyez5gf6xjfptlhc3o4n6o6hvm",
+      "name": "samplefile.png",
+      "size": 296639,
+      "content_path": "v1/vaults/ftz4pm2xxwmwrsd7rjqn7grzfz/items/2fcbqwe9ndg175zg2dzwftvkpa/files/oyez5gf6xjfptlhc3o4n6o6hvm/content"
+    }
+  ],
+  "createdAt": "2021-04-10T17:20:05.98944527Z",
+  "updatedAt": "2021-04-13T17:20:05.989445411Z"
+}

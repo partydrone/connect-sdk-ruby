@@ -6,7 +6,7 @@ module OpConnect
       end
       alias_method :vaults, :list_vaults
 
-      def get_vault(id)
+      def get_vault(id:)
         Vault.new get("vaults/#{id}").body
       end
       alias_method :vault, :get_vault

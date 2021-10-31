@@ -1,10 +1,12 @@
 module OpConnect
   class Client
     autoload :Vaults, "op_connect/client/vaults"
+    autoload :Items, "op_connect/client/items"
 
     include OpConnect::Configurable
     include OpConnect::Connection
     include OpConnect::Client::Vaults
+    include OpConnect::Client::Items
 
     def initialize(options = {})
       OpConnect::Configurable.keys.each do |key|

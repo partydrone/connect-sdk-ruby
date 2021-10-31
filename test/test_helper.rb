@@ -26,3 +26,9 @@ require "faraday"
 require "json"
 
 Minitest::Reporters.use! Minitest::Reporters::DefaultReporter.new(color: true)
+
+class Minitest::Test
+  def fixture(filename)
+    File.read("test/fixtures/#{filename}")
+  end
+end
