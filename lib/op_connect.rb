@@ -26,16 +26,7 @@ module OpConnect
 
   # Classes used to return a nicer object wrapping the response.
   autoload :APIRequest, "op_connect/api_request"
-  autoload :Actor, "op_connect/api_request"
-  autoload :Resource, "op_connect/api_request"
-
   autoload :Item, "op_connect/item"
-  autoload :Field, "op_connect/item"
-  autoload :File, "op_connect/item"
-  autoload :GeneratorRecipe, "op_connect/item"
-  autoload :Section, "op_connect/item"
-  autoload :URL, "op_connect/item"
-
   autoload :ServerHealth, "op_connect/server_health"
   autoload :Vault, "op_connect/vault"
 

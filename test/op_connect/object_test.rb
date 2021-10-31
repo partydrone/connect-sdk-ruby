@@ -11,11 +11,11 @@ describe OpConnect::Object do
     _(subject.new(foo: {bar: {baz: "foobar"}}).foo.bar.baz).must_equal "foobar"
   end
 
-  it "handles nested numbers" do
+  it "handles numbers" do
     _(subject.new(foo: {bar: 1}).foo.bar).must_equal 1
   end
 
-  it "handles nested arrays" do
+  it "handles arrays" do
     object = subject.new(foo: [{bar: :baz}])
 
     _(object.foo.first).must_be_kind_of OpenStruct
