@@ -1,0 +1,132 @@
+[
+  {
+    "requestId": "d6bac025-2319-4e6e-8ecc-dd2429f9446a",
+    "timestamp": "2021-10-31 07:48:57 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT" }
+  },
+  {
+    "requestId": "3a0dca18-16c1-493a-bc51-0f887fd94030",
+    "timestamp": "2021-10-30 22:54:51 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT", "vault": { "id": "alynbizzypgx62nti6zxajloei" } }
+  },
+  {
+    "requestId": "881d95d6-30c6-42ea-b88c-1d1ef77def54",
+    "timestamp": "2021-10-30 22:50:37 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT" }
+  },
+  {
+    "requestId": "f8a60968-3a0d-4c4c-a6be-40e0ef203562",
+    "timestamp": "2021-10-28 06:36:39 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT" }
+  },
+  {
+    "requestId": "bb48ff09-d4a5-472c-86e9-3ddb31bd3851",
+    "timestamp": "2021-10-28 06:34:07 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT" }
+  },
+  {
+    "requestId": "492d922f-a1d0-4100-9526-2f1b9ba29670",
+    "timestamp": "2021-10-28 06:21:16 UTC",
+    "action": "READ",
+    "result": "DENY",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "vault": { "id": "123abc" } }
+  },
+  {
+    "requestId": "e0ff35c5-6c56-4c17-84b0-c7018827283a",
+    "timestamp": "2021-10-28 06:19:11 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT" }
+  },
+  {
+    "requestId": "dc887ea9-3aa2-4ddb-bccb-b8cd5ccdce9c",
+    "timestamp": "2021-10-28 06:17:33 UTC",
+    "action": "READ",
+    "result": "DENY",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "vault": { "id": "abc123" } }
+  },
+  {
+    "requestId": "23a63b99-2cf5-4225-be0b-1e79da30d556",
+    "timestamp": "2021-10-28 06:13:22 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT" }
+  },
+  {
+    "requestId": "f7e086b3-181d-4272-9dfb-fcec46bcb42e",
+    "timestamp": "2021-10-28 06:08:48 UTC",
+    "action": "READ",
+    "result": "SUCCESS",
+    "actor": {
+      "id": "2L47D4X7AZBXZINPILVYXAKC6I",
+      "account": "JXZGYLHD2ZHWTCHNEKZYWQQTAA",
+      "jti": "rm4etwz4jqqqxskbqyaqxtlkmu",
+      "userAgent": "1Password Connect Ruby Gem 0.1.0"
+    },
+    "resource": { "type": "VAULT" }
+  }
+]

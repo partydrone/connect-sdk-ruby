@@ -106,6 +106,53 @@ describe OpConnect::Client do
     it "sets a custom user agent"
   end
 
+  describe "utility methods" do
+    let(:stubs) { Faraday::Adapter::Test::Stubs.new }
+    let(:client) { subject.new(access_token: "fake", adapter: :test, stubs: stubs) }
+
+    describe "activity" do
+      it "returns a list of API requests" do
+        stubs.get("/v1/activity") { [200, {"Content-Type": "application/json"}, fixture("activity.json")] }
+
+        api_request = client.activity.first
+
+        _(api_request).must_be_instance_of OpConnect::APIRequest
+        _(api_request.action).must_equal "READ"
+      end
+    end
+
+    describe "heartbeat" do
+      it "returns true if the server is active" do
+        stubs.get("/heartbeat") { [200, {"Content-Type": "text/plain"}, "."] }
+
+        _(client.heartbeat).must_equal true
+      end
+
+      it "returns false if the servier is not active" do
+        stubs.get("/heartbeat") { [500, {}, ""] }
+
+        _(client.heartbeat).must_equal false
+      end
+    end
+
+    describe "health" do
+      it "returns the state of the server" do
+        stubs.get("/health") { [200, {"Content-Type": "application/json"}, fixture("health.json")] }
+
+        _(client.health).must_be_instance_of OpConnect::ServerHealth
+        _(client.health.name).must_equal "1Password Connect API"
+      end
+    end
+
+    describe "metrics" do
+      it "returns metrics collected by the server" do
+        stubs.get("/metrics") { [200, {"Content-Type": "text/plain"}, fixture("metrics.txt")] }
+
+        _(client.metrics).must_equal "Metrics go here!\n"
+      end
+    end
+  end
+
   describe "error handling" do
     let(:stubs) { Faraday::Adapter::Test::Stubs.new }
     let(:client) { subject.new(access_token: "fake", adapter: :test, stubs: stubs) }

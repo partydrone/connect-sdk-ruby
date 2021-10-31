@@ -25,9 +25,11 @@ module OpConnect
   autoload :ServiceUnavailable, "op_connect/error"
 
   # Classes used to return a nicer object wrapping the response.
-  autoload :Vault, "op_connect/vault"
-  autoload :Item, "op_connect/item"
+  autoload :APIRequest, "op_connect/api_request"
   autoload :File, "op_connect/file"
+  autoload :Item, "op_connect/item"
+  autoload :ServerHealth, "op_connect/server_health"
+  autoload :Vault, "op_connect/vault"
 
   class << self
     include OpConnect::Configurable

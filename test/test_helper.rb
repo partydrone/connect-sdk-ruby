@@ -13,9 +13,8 @@ SimpleCov.start do
     SimpleCov::Formatter::TailwindFormatter
   ])
 
-  add_group "Models", "lib/connect/objects/"
-  add_group "Resources", "lib/connect/client/"
-  add_group "Middleware", ["lib/connect/request/", "lib/connect/response/", "lib/connect/middleware/"]
+  add_group "Resources", "lib/op_connect/client/"
+  add_group "Middleware", ["lib/op_connect/request/", "lib/op_connect/response/", "lib/op_connect/middleware/"]
 end
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)

@@ -23,11 +23,23 @@ module OpConnect
       inspected
     end
 
-    def health
+    def activity(**params)
+      get("activity", params: params).body.map { |a| APIRequest.new(a) }
     end
 
     def heartbeat
-      get("heartbeat")
+      return true if get("/heartbeat").status == 200
+      false
+    rescue OpConnect::Error
+      false
+    end
+
+    def health
+      ServerHealth.new get("/health").body
+    end
+
+    def metrics
+      get("/metrics").body
     end
   end
 end
