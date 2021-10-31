@@ -33,7 +33,7 @@ module OpConnect
     end
 
     def api_endpoint
-      File.join(@api_endpoint, "")
+      ::File.join(@api_endpoint, "")
     end
 
     private
