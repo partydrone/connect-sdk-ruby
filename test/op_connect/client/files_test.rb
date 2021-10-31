@@ -11,7 +11,7 @@ describe OpConnect::Client::Files do
       _(client.files(
         vault_id: "ftz4pm2xxwmwrsd7rjqn7grzfz",
         item_id: "2fcbqwe9ndg175zg2dzwftvkpa"
-      ).first).must_be_instance_of OpConnect::File
+      ).first).must_be_instance_of OpConnect::Item::File
     end
   end
 
@@ -25,7 +25,7 @@ describe OpConnect::Client::Files do
         id: "6r65pjq33banznomn7q22sj44e"
       )
 
-      _(file).must_be_instance_of OpConnect::File
+      _(file).must_be_instance_of OpConnect::Item::File
       _(file.id).must_equal "6r65pjq33banznomn7q22sj44e"
       _(file.name).must_equal "testfile.txt"
     end
