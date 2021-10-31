@@ -1,0 +1,27 @@
+name: Test Coverage Report
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler: default
+          bundler-cache: true
+
+      - uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: bundle exec rake test
+          coverageLocations: |
+            ${{ github.workspace }}/test/coverage/lcov/*.lcov:lcov
