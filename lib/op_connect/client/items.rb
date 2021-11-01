@@ -22,7 +22,7 @@ module OpConnect
       def delete_item(vault_id:, id:)
         return true if delete("vaults/#{vault_id}/items/#{id}").status == 204
         false
-      rescue OpConnect::Error => e
+      rescue OpConnect::Error
         false
       end
 
