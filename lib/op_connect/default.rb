@@ -7,7 +7,7 @@ module OpConnect
   #
   module Default
     API_ENDPOINT = "http://localhost:8080/v1"
-    USER_AGENT = "1Password Connect Ruby Gem #{OpConnect::VERSION}"
+    USER_AGENT = "1Password Connect Ruby SDK #{OpConnect::VERSION}"
 
     class << self
       # Configuration options

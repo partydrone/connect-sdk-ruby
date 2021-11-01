@@ -1,1 +1,251 @@
-Metrics go here!
+# HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
+# TYPE go_gc_duration_seconds summary
+go_gc_duration_seconds{quantile="0"} 8.5835e-05
+go_gc_duration_seconds{quantile="0.25"} 0.000183544
+go_gc_duration_seconds{quantile="0.5"} 0.000262464
+go_gc_duration_seconds{quantile="0.75"} 0.000414508
+go_gc_duration_seconds{quantile="1"} 0.009213462
+go_gc_duration_seconds_sum 0.642423919
+go_gc_duration_seconds_count 1059
+# HELP go_goroutines Number of goroutines that currently exist.
+# TYPE go_goroutines gauge
+go_goroutines 24
+# HELP go_info Information about the Go environment.
+# TYPE go_info gauge
+go_info{version="go1.16.6"} 1
+# HELP go_memstats_alloc_bytes Number of bytes allocated and still in use.
+# TYPE go_memstats_alloc_bytes gauge
+go_memstats_alloc_bytes 2.41688e+06
+# HELP go_memstats_alloc_bytes_total Total number of bytes allocated, even if freed.
+# TYPE go_memstats_alloc_bytes_total counter
+go_memstats_alloc_bytes_total 2.00779012e+09
+# HELP go_memstats_buck_hash_sys_bytes Number of bytes used by the profiling bucket hash table.
+# TYPE go_memstats_buck_hash_sys_bytes gauge
+go_memstats_buck_hash_sys_bytes 1.470323e+06
+# HELP go_memstats_frees_total Total number of frees.
+# TYPE go_memstats_frees_total counter
+go_memstats_frees_total 2.731648e+06
+# HELP go_memstats_gc_cpu_fraction The fraction of this program's available CPU time used by the GC since the program started.
+# TYPE go_memstats_gc_cpu_fraction gauge
+go_memstats_gc_cpu_fraction 2.1072355684747264e-05
+# HELP go_memstats_gc_sys_bytes Number of bytes used for garbage collection system metadata.
+# TYPE go_memstats_gc_sys_bytes gauge
+go_memstats_gc_sys_bytes 5.277064e+06
+# HELP go_memstats_heap_alloc_bytes Number of heap bytes allocated and still in use.
+# TYPE go_memstats_heap_alloc_bytes gauge
+go_memstats_heap_alloc_bytes 2.41688e+06
+# HELP go_memstats_heap_idle_bytes Number of heap bytes waiting to be used.
+# TYPE go_memstats_heap_idle_bytes gauge
+go_memstats_heap_idle_bytes 6.1546496e+07
+# HELP go_memstats_heap_inuse_bytes Number of heap bytes that are in use.
+# TYPE go_memstats_heap_inuse_bytes gauge
+go_memstats_heap_inuse_bytes 4.186112e+06
+# HELP go_memstats_heap_objects Number of allocated objects.
+# TYPE go_memstats_heap_objects gauge
+go_memstats_heap_objects 12848
+# HELP go_memstats_heap_released_bytes Number of heap bytes released to OS.
+# TYPE go_memstats_heap_released_bytes gauge
+go_memstats_heap_released_bytes 6.0710912e+07
+# HELP go_memstats_heap_sys_bytes Number of heap bytes obtained from system.
+# TYPE go_memstats_heap_sys_bytes gauge
+go_memstats_heap_sys_bytes 6.5732608e+07
+# HELP go_memstats_last_gc_time_seconds Number of seconds since 1970 of last garbage collection.
+# TYPE go_memstats_last_gc_time_seconds gauge
+go_memstats_last_gc_time_seconds 1.6357310990909276e+09
+# HELP go_memstats_lookups_total Total number of pointer lookups.
+# TYPE go_memstats_lookups_total counter
+go_memstats_lookups_total 0
+# HELP go_memstats_mallocs_total Total number of mallocs.
+# TYPE go_memstats_mallocs_total counter
+go_memstats_mallocs_total 2.744496e+06
+# HELP go_memstats_mcache_inuse_bytes Number of bytes in use by mcache structures.
+# TYPE go_memstats_mcache_inuse_bytes gauge
+go_memstats_mcache_inuse_bytes 9600
+# HELP go_memstats_mcache_sys_bytes Number of bytes used for mcache structures obtained from system.
+# TYPE go_memstats_mcache_sys_bytes gauge
+go_memstats_mcache_sys_bytes 16384
+# HELP go_memstats_mspan_inuse_bytes Number of bytes in use by mspan structures.
+# TYPE go_memstats_mspan_inuse_bytes gauge
+go_memstats_mspan_inuse_bytes 141576
+# HELP go_memstats_mspan_sys_bytes Number of bytes used for mspan structures obtained from system.
+# TYPE go_memstats_mspan_sys_bytes gauge
+go_memstats_mspan_sys_bytes 163840
+# HELP go_memstats_next_gc_bytes Number of heap bytes when next garbage collection will take place.
+# TYPE go_memstats_next_gc_bytes gauge
+go_memstats_next_gc_bytes 4.194304e+06
+# HELP go_memstats_other_sys_bytes Number of bytes used for other system allocations.
+# TYPE go_memstats_other_sys_bytes gauge
+go_memstats_other_sys_bytes 1.543949e+06
+# HELP go_memstats_stack_inuse_bytes Number of bytes in use by the stack allocator.
+# TYPE go_memstats_stack_inuse_bytes gauge
+go_memstats_stack_inuse_bytes 1.376256e+06
+# HELP go_memstats_stack_sys_bytes Number of bytes obtained from system for stack allocator.
+# TYPE go_memstats_stack_sys_bytes gauge
+go_memstats_stack_sys_bytes 1.376256e+06
+# HELP go_memstats_sys_bytes Number of bytes obtained from system.
+# TYPE go_memstats_sys_bytes gauge
+go_memstats_sys_bytes 7.5580424e+07
+# HELP go_threads Number of OS threads created.
+# TYPE go_threads gauge
+go_threads 13
+# HELP jaeger_tracer_baggage_restrictions_updates_total Number of times baggage restrictions were successfully updated
+# TYPE jaeger_tracer_baggage_restrictions_updates_total counter
+jaeger_tracer_baggage_restrictions_updates_total{result="err"} 0
+jaeger_tracer_baggage_restrictions_updates_total{result="ok"} 0
+# HELP jaeger_tracer_baggage_truncations_total Number of times baggage was truncated as per baggage restrictions
+# TYPE jaeger_tracer_baggage_truncations_total counter
+jaeger_tracer_baggage_truncations_total 0
+# HELP jaeger_tracer_baggage_updates_total Number of times baggage was successfully written or updated on spans
+# TYPE jaeger_tracer_baggage_updates_total counter
+jaeger_tracer_baggage_updates_total{result="err"} 0
+jaeger_tracer_baggage_updates_total{result="ok"} 0
+# HELP jaeger_tracer_finished_spans_total Number of sampled spans finished by this tracer
+# TYPE jaeger_tracer_finished_spans_total counter
+jaeger_tracer_finished_spans_total{sampled="delayed"} 0
+jaeger_tracer_finished_spans_total{sampled="n"} 28
+jaeger_tracer_finished_spans_total{sampled="y"} 0
+# HELP jaeger_tracer_reporter_queue_length Current number of spans in the reporter queue
+# TYPE jaeger_tracer_reporter_queue_length gauge
+jaeger_tracer_reporter_queue_length 0
+# HELP jaeger_tracer_reporter_spans_total Number of spans successfully reported
+# TYPE jaeger_tracer_reporter_spans_total counter
+jaeger_tracer_reporter_spans_total{result="dropped"} 0
+jaeger_tracer_reporter_spans_total{result="err"} 0
+jaeger_tracer_reporter_spans_total{result="ok"} 0
+# HELP jaeger_tracer_sampler_queries_total Number of times the Sampler succeeded to retrieve sampling strategy
+# TYPE jaeger_tracer_sampler_queries_total counter
+jaeger_tracer_sampler_queries_total{result="err"} 1426
+jaeger_tracer_sampler_queries_total{result="ok"} 0
+# HELP jaeger_tracer_sampler_updates_total Number of times the Sampler succeeded to retrieve and update sampling strategy
+# TYPE jaeger_tracer_sampler_updates_total counter
+jaeger_tracer_sampler_updates_total{result="err"} 0
+jaeger_tracer_sampler_updates_total{result="ok"} 0
+# HELP jaeger_tracer_span_context_decoding_errors_total Number of errors decoding tracing context
+# TYPE jaeger_tracer_span_context_decoding_errors_total counter
+jaeger_tracer_span_context_decoding_errors_total 0
+# HELP jaeger_tracer_started_spans_total Number of spans started by this tracer as sampled
+# TYPE jaeger_tracer_started_spans_total counter
+jaeger_tracer_started_spans_total{sampled="delayed"} 0
+jaeger_tracer_started_spans_total{sampled="n"} 28
+jaeger_tracer_started_spans_total{sampled="y"} 0
+# HELP jaeger_tracer_throttled_debug_spans_total Number of times debug spans were throttled
+# TYPE jaeger_tracer_throttled_debug_spans_total counter
+jaeger_tracer_throttled_debug_spans_total 0
+# HELP jaeger_tracer_throttler_updates_total Number of times throttler successfully updated
+# TYPE jaeger_tracer_throttler_updates_total counter
+jaeger_tracer_throttler_updates_total{result="err"} 0
+jaeger_tracer_throttler_updates_total{result="ok"} 0
+# HELP jaeger_tracer_traces_total Number of traces started by this tracer as sampled
+# TYPE jaeger_tracer_traces_total counter
+jaeger_tracer_traces_total{sampled="n",state="joined"} 0
+jaeger_tracer_traces_total{sampled="n",state="started"} 28
+jaeger_tracer_traces_total{sampled="y",state="joined"} 0
+jaeger_tracer_traces_total{sampled="y",state="started"} 0
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 800.59
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.048576e+06
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 17
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.5788416e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.63564554734e+09
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 1.573728256e+09
+# HELP process_virtual_memory_max_bytes Maximum amount of virtual memory available in bytes.
+# TYPE process_virtual_memory_max_bytes gauge
+process_virtual_memory_max_bytes 1.8446744073709552e+19
+# HELP promhttp_metric_handler_requests_in_flight Current number of scrapes being served.
+# TYPE promhttp_metric_handler_requests_in_flight gauge
+promhttp_metric_handler_requests_in_flight 1
+# HELP promhttp_metric_handler_requests_total Total number of scrapes by HTTP status code.
+# TYPE promhttp_metric_handler_requests_total counter
+promhttp_metric_handler_requests_total{code="200"} 1
+promhttp_metric_handler_requests_total{code="500"} 0
+promhttp_metric_handler_requests_total{code="503"} 0
+# HELP secret_service_api_http_duration_seconds Duration of HTTP requests.
+# TYPE secret_service_api_http_duration_seconds histogram
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="0.005"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="0.01"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="0.025"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="0.05"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="0.1"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="0.25"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="0.5"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="1"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="2.5"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="5"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="10"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/activity",le="+Inf"} 1
+secret_service_api_http_duration_seconds_sum{method="GET",path="/v1/activity"} 0.013567856
+secret_service_api_http_duration_seconds_count{method="GET",path="/v1/activity"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="0.005"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="0.01"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="0.025"} 13
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="0.05"} 13
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="0.1"} 13
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="0.25"} 13
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="0.5"} 13
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="1"} 13
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="2.5"} 14
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="5"} 14
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="10"} 14
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults",le="+Inf"} 14
+secret_service_api_http_duration_seconds_sum{method="GET",path="/v1/vaults"} 1.364741204
+secret_service_api_http_duration_seconds_count{method="GET",path="/v1/vaults"} 14
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="0.005"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="0.01"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="0.025"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="0.05"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="0.1"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="0.25"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="0.5"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="1"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="2.5"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="5"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="10"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid",le="+Inf"} 2
+secret_service_api_http_duration_seconds_sum{method="GET",path="/v1/vaults/:uuid"} 0.029693763
+secret_service_api_http_duration_seconds_count{method="GET",path="/v1/vaults/:uuid"} 2
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="0.005"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="0.01"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="0.025"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="0.05"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="0.1"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="0.25"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="0.5"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="1"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="2.5"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="5"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="10"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items",le="+Inf"} 10
+secret_service_api_http_duration_seconds_sum{method="GET",path="/v1/vaults/:uuid/items"} 0.14394825300000003
+secret_service_api_http_duration_seconds_count{method="GET",path="/v1/vaults/:uuid/items"} 10
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="0.005"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="0.01"} 0
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="0.025"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="0.05"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="0.1"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="0.25"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="0.5"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="1"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="2.5"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="5"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="10"} 1
+secret_service_api_http_duration_seconds_bucket{method="GET",path="/v1/vaults/:uuid/items/:uuid/files",le="+Inf"} 1
+secret_service_api_http_duration_seconds_sum{method="GET",path="/v1/vaults/:uuid/items/:uuid/files"} 0.019126942
+secret_service_api_http_duration_seconds_count{method="GET",path="/v1/vaults/:uuid/items/:uuid/files"} 1
+# HELP secret_service_api_http_method_counts Count of HTTP requests by method.
+# TYPE secret_service_api_http_method_counts counter
+secret_service_api_http_method_counts{method="GET",path="/v1/activity"} 1
+secret_service_api_http_method_counts{method="GET",path="/v1/vaults"} 14
+secret_service_api_http_method_counts{method="GET",path="/v1/vaults/:uuid"} 2
+secret_service_api_http_method_counts{method="GET",path="/v1/vaults/:uuid/items"} 10
+secret_service_api_http_method_counts{method="GET",path="/v1/vaults/:uuid/items/:uuid/files"} 1

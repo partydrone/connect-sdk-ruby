@@ -20,9 +20,9 @@ module OpConnect
       @tags = options["tags"]
       @version = options["version"]
       @state = options["state"]
-      @sections = options["sections"]&.collect! { |section| Section.new(section) }
-      @fields = options["fields"]&.collect! { |field| Field.new(field) }
-      @files = options["files"]&.collect! { |file| File.new(file) }
+      @sections = options["sections"]&.collect! { |section| Section.new(section) } || []
+      @fields = options["fields"]&.collect! { |field| Field.new(field) } || []
+      @files = options["files"]&.collect! { |file| File.new(file) } || []
       @created_at = options["createdAt"]
       @updated_at = options["updatedAt"]
       @last_edited_by = options["lastEditedBy"]

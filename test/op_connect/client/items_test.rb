@@ -162,7 +162,13 @@ describe OpConnect::Client::Items do
     it "deletes an item" do
       stubs.delete("/v1/vaults/ftz4pm2xxwmwrsd7rjqn7grzfz/items/2fcbqwe9ndg175zg2dzwftvkpa") { [204, {}, ""] }
 
-      _(client.delete_item(vault_id: "ftz4pm2xxwmwrsd7rjqn7grzfz", id: "2fcbqwe9ndg175zg2dzwftvkpa").status).must_equal 204
+      _(client.delete_item(vault_id: "ftz4pm2xxwmwrsd7rjqn7grzfz", id: "2fcbqwe9ndg175zg2dzwftvkpa")).must_equal true
+    end
+
+    it "returns false on error" do
+      stubs.delete("/v1/vaults/ftz4pm2xxwmwrsd7rjqn7grzfz/items/2fcbqwe9ndg175zg2dzwftvkpa") { [400, {}, ""] }
+
+      _(client.delete_item(vault_id: "ftz4pm2xxwmwrsd7rjqn7grzfz", id: "2fcbqwe9ndg175zg2dzwftvkpa")).must_equal false
     end
   end
 

@@ -148,7 +148,7 @@ describe OpConnect::Client do
       it "returns metrics collected by the server" do
         stubs.get("/metrics") { [200, {"Content-Type": "text/plain"}, fixture("metrics.txt")] }
 
-        _(client.metrics).must_equal "Metrics go here!\n"
+        _(client.metrics).must_match /go_goroutines 24/
       end
     end
   end
