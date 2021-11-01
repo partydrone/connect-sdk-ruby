@@ -1,6 +1,6 @@
 # 1Password Connect Ruby SDK
 
-![example workflow](https://github.com/partydrone/connect-sdk-ruby/actions/workflows/test.yml/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/e5d93bbb1ec1b779aada/maintainability)](https://codeclimate.com/github/partydrone/connect-sdk-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e5d93bbb1ec1b779aada/test_coverage)](https://codeclimate.com/github/partydrone/connect-sdk-ruby/test_coverage)
+![example workflow](https://github.com/partydrone/connect-sdk-ruby/actions/workflows/test.yml/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/e5d93bbb1ec1b779aada/maintainability)](https://codeclimate.com/github/partydrone/connect-sdk-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e5d93bbb1ec1b779aada/test_coverage)](https://codeclimate.com/github/partydrone/connect-sdk-ruby/test_coverage) [![Gem Version](https://badge.fury.io/rb/op_connect.svg)](https://badge.fury.io/rb/op_connect)
 
 <img width="1012" alt="op_connect_banner" src="https://user-images.githubusercontent.com/57892/139618110-63e92aa3-794a-463b-b72a-d6a5909a5b8a.png">
 
