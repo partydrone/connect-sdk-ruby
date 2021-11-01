@@ -2,6 +2,8 @@
 
 ![example workflow](https://github.com/partydrone/connect-sdk-ruby/actions/workflows/test.yml/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/e5d93bbb1ec1b779aada/maintainability)](https://codeclimate.com/github/partydrone/connect-sdk-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e5d93bbb1ec1b779aada/test_coverage)](https://codeclimate.com/github/partydrone/connect-sdk-ruby/test_coverage)
 
+<img width="1012" alt="op_connect_banner" src="https://user-images.githubusercontent.com/57892/139618110-63e92aa3-794a-463b-b72a-d6a5909a5b8a.png">
+
 The 1Password Connect Ruby SDK provides access to the 1Password Connect API
 hosted on your infrastructure. The gem is intended to be used by your
 applications, pipelines, and other automations to simplify accessing items
@@ -285,6 +287,25 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+### Running a local 1Password Connect API server
+
+This project includes a docker-compose.yml file that will download and run an
+API and Sync server for you to test with locally. You will need to:
+
+- [ ] Install Docker, Docker for Mac, or Docker for Windows.
+- [ ] Place your 1password-credentials.json file in the root of this project.
+
+> 👀 See [Get started with a 1Password Secrets Automation workflow][secrets_automation_workflow]
+> for more information.
+
+### Resources
+
+Some links that are definitely worth checking out:
+
+- [1Password Secrets Automation](https://1password.com/secrets/)
+- [Get started with a 1Password Secrets Automation workflow][secrets_automation_workflow]
+- [1Password Connect API reference][api_docs]
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/partydrone/connect-sdk-ruby>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/partydrone/connect/blob/main/CODE_OF_CONDUCT.md).
@@ -298,3 +319,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 Everyone interacting in the Connect project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/partydrone/connect/blob/main/CODE_OF_CONDUCT.md).
 
 [api_docs]: https://support.1password.com/connect-api-reference '1Password Connect API reference'
+[secrets_automation_workflow]: https://support.1password.com/secrets-automation/ 'Get started with a 1Password Secrets Automation workflow'
