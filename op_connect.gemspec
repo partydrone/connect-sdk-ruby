@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["partydrone@icloud.com"]
 
   spec.summary = "A Ruby SDK for the 1Password Connect API."
-  spec.description = "A Ruby SDK for the 1Password Connect API. 1Password Connect API documentation can be found at https://support.1password.com/connect-api-reference/"
+  spec.description = "A Ruby SDK for the 1Password Connect API."
   spec.homepage = "https://github.com/partydrone/connect-sdk-ruby"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.5.0"
