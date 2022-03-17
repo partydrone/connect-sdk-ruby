@@ -31,7 +31,7 @@ module OpConnect
 
     # Retrieve a list of API requests that have been made.
     #
-    # @param **params [Hash] Optional parameters.
+    # @param params [Hash] Optional parameters.
     # @option params [Integer] :limit How many API Events should be returned
     #   in a single request.
     # @option params [Integer] :offset How far into the collection of API

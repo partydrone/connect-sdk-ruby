@@ -69,11 +69,6 @@
 
   
   
-  <dl>
-      <dt>Extended by:</dt>
-      <dd><span class='object_link'><a href="OpConnect/Configurable.html" title="OpConnect::Configurable (module)">Configurable</a></span></dd>
-  </dl>
-  
   
   
   
@@ -83,25 +78,14 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/op_connect.rb<span class="defines">,<br />
-  lib/op_connect/item.rb,<br /> lib/op_connect/error.rb,<br /> lib/op_connect/vault.rb,<br /> lib/op_connect/client.rb,<br /> lib/op_connect/object.rb,<br /> lib/op_connect/default.rb,<br /> lib/op_connect/version.rb,<br /> lib/op_connect/item/url.rb,<br /> lib/op_connect/response.rb,<br /> lib/op_connect/item/file.rb,<br /> lib/op_connect/connection.rb,<br /> lib/op_connect/item/field.rb,<br /> lib/op_connect/api_request.rb,<br /> lib/op_connect/client/files.rb,<br /> lib/op_connect/client/items.rb,<br /> lib/op_connect/configurable.rb,<br /> lib/op_connect/item/section.rb,<br /> lib/op_connect/client/vaults.rb,<br /> lib/op_connect/server_health.rb,<br /> lib/op_connect/api_request/actor.rb,<br /> lib/op_connect/api_request/resource.rb,<br /> lib/op_connect/response/raise_error.rb,<br /> lib/op_connect/item/generator_recipe.rb,<br /> lib/op_connect/server_health/dependency.rb</span>
+    <dd>lib/op_connect/api_request.rb<span class="defines">,<br />
+  lib/op_connect/client.rb,<br /> lib/op_connect/configurable.rb,<br /> lib/op_connect/connection.rb,<br /> lib/op_connect/default.rb,<br /> lib/op_connect/error.rb,<br /> lib/op_connect/item.rb,<br /> lib/op_connect/object.rb,<br /> lib/op_connect/response.rb,<br /> lib/op_connect/server_health.rb,<br /> lib/op_connect/vault.rb,<br /> lib/op_connect/version.rb</span>
 </dd>
   </dl>
   
 </div>
 
-<h2>Overview</h2><div class="docstring">
-  <div class="discussion">
-    
-<p>Ruby toolkit for the 1Password Connect REST API.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><h2>Defined Under Namespace</h2>
+<h2>Defined Under Namespace</h2>
 <p class="children">
   
     
@@ -135,133 +119,15 @@
 
 
 
-  <h2>Instance Attribute Summary</h2>
-  
-  <h3 class="inherited">Attributes included from <span class='object_link'><a href="OpConnect/Configurable.html" title="OpConnect::Configurable (module)">Configurable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="OpConnect/Configurable.html#access_token-instance_method" title="OpConnect::Configurable#access_token (method)">#access_token</a></span>, <span class='object_link'><a href="OpConnect/Configurable.html#adapter-instance_method" title="OpConnect::Configurable#adapter (method)">#adapter</a></span>, <span class='object_link'><a href="OpConnect/Configurable.html#api_endpoint-instance_method" title="OpConnect::Configurable#api_endpoint (method)">#api_endpoint</a></span>, <span class='object_link'><a href="OpConnect/Configurable.html#stubs-instance_method" title="OpConnect::Configurable#stubs (method)">#stubs</a></span>, <span class='object_link'><a href="OpConnect/Configurable.html#user_agent-instance_method" title="OpConnect::Configurable#user_agent (method)">#user_agent</a></span></p>
 
 
-  
-    <h2>
-      Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#client-class_method" title="client (class method)">.<strong>client</strong>  &#x21d2; OpConnect::Client </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>API client based on configured options <span class='object_link'><a href="OpConnect/Configurable.html" title="OpConnect::Configurable (module)">Configurable</a></span>.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="OpConnect/Configurable.html" title="OpConnect::Configurable (module)">Configurable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="OpConnect/Configurable.html#configure-instance_method" title="OpConnect::Configurable#configure (method)">configure</a></span>, <span class='object_link'><a href="OpConnect/Configurable.html#keys-class_method" title="OpConnect::Configurable.keys (method)">keys</a></span>, <span class='object_link'><a href="OpConnect/Configurable.html#reset!-instance_method" title="OpConnect::Configurable#reset! (method)">reset!</a></span>, <span class='object_link'><a href="OpConnect/Configurable.html#same_options%3F-instance_method" title="OpConnect::Configurable#same_options? (method)">same_options?</a></span></p>
-
-
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="client-class_method">
-  
-    .<strong>client</strong>  &#x21d2; <tt><span class='object_link'><a href="OpConnect/Client.html" title="OpConnect::Client (class)">OpConnect::Client</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>API client based on configured options <span class='object_link'><a href="OpConnect/Configurable.html" title="OpConnect::Configurable (module)">Configurable</a></span></p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="OpConnect/Client.html" title="OpConnect::Client (class)">OpConnect::Client</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>API wrapper</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-40
-41
-42
-43</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/op_connect.rb', line 40</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_client'>client</span>
-  <span class='kw'>return</span> <span class='ivar'>@client</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_same_options?'>same_options?</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='ivar'>@client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="OpConnect (module)">OpConnect</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="OpConnect/Client.html" title="OpConnect::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OpConnect/Client.html#initialize-instance_method" title="OpConnect::Client#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 
       <div id="footer">
-  Generated on Mon Mar 14 05:16:28 2022 by
+  Generated on Thu Mar 17 06:03:08 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.27 (ruby-3.1.1).
+  0.9.27 (ruby-2.7.5).
 </div>
 
     </div>

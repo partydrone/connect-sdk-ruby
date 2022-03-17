@@ -94,23 +94,11 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/op_connect/api_request.rb<span class="defines">,<br />
-  lib/op_connect/api_request/actor.rb,<br /> lib/op_connect/api_request/resource.rb</span>
-</dd>
+    <dd>lib/op_connect/api_request.rb</dd>
   </dl>
   
 </div>
 
-<h2>Defined Under Namespace</h2>
-<p class="children">
-  
-    
-  
-    
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="APIRequest/Actor.html" title="OpConnect::APIRequest::Actor (class)">Actor</a></span>, <span class='object_link'><a href="APIRequest/Resource.html" title="OpConnect::APIRequest::Resource (class)">Resource</a></span>
-    
-  
-</p>
 
 
 
@@ -380,8 +368,8 @@
   <span class='ivar'>@timestamp</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>timestamp</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='ivar'>@action</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>action</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='ivar'>@result</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>result</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-  <span class='ivar'>@actor</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="APIRequest/Actor.html" title="OpConnect::APIRequest::Actor (class)">Actor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="APIRequest/Actor.html#initialize-instance_method" title="OpConnect::APIRequest::Actor#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>actor</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@resource</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="APIRequest/Resource.html" title="OpConnect::APIRequest::Resource (class)">Resource</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="APIRequest/Resource.html#initialize-instance_method" title="OpConnect::APIRequest::Resource#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resource</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@actor</span> <span class='op'>=</span> <span class='const'>Actor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>actor</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@resource</span> <span class='op'>=</span> <span class='const'>Resource</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resource</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -657,9 +645,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Mar 14 05:16:29 2022 by
+  Generated on Thu Mar 17 06:03:08 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.27 (ruby-3.1.1).
+  0.9.27 (ruby-2.7.5).
 </div>
 
     </div>
