@@ -9,3 +9,4 @@
 /tmp/
 Gemfile.lock
 1password-credentials.json
+docker-compose.*.yml

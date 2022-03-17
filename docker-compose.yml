@@ -1,6 +1,20 @@
 version: '3.8'
 
 services:
+  ruby:
+    build:
+      args:
+        RUBY_VERSION: 2.7.5
+      context: .
+    depends_on:
+      - op-connect-api
+      - op-connect-sync
+    environment:
+      - OP_CONNECT_API_ENDPOINT=http://op-connect-api:8080/v1
+    volumes:
+      - .:/opt/gem
+      - bundle:/usr/local/bundle
+
   op-connect-api:
     image: 1password/connect-api:latest
     ports:
@@ -17,4 +31,5 @@ services:
       - op-connect-data:/home/opuser/.op/data
 
 volumes:
-  op-connect-data:
+  bundle: null
+  op-connect-data: null
