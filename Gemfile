@@ -10,6 +10,7 @@ gem "minitest", "~> 5.0"
 gem "minitest-reporters"
 gem "guard"
 gem "guard-minitest"
+gem "pry"
 gem "standard"
 gem "simplecov", require: false
 gem "simplecov-lcov", require: false
