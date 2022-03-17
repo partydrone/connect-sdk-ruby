@@ -3,32 +3,34 @@ name: Generate Documentation
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   docs:
     runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.1
-        bundler: default
-        bundler-cache: true
-    - name: Install YARD
-      run: gem install yard
-    - name: Generate documentation
-      run: yard --protected --output-dir ./docs  lib/**/*.rb
-    - name: Configure git
-      run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "<>"
-    - name: Commit new files
-      run: |
-        # Stage files, then commit and push
-        git add .
-        git commit -m "Update documentation"
-        git push origin main
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler: default
+          bundler-cache: true
+
+      - name: Install YARD
+        run: gem install yard
+
+      - name: Generate documentation
+        run: yard --protected --output-dir ./docs  lib/**/*.rb
+
+      - name: Configure git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Commit new files
+        run: |
+          # Stage files, then commit and push
+          git add .
+          git commit -m "Update documentation"
+          git push origin main
