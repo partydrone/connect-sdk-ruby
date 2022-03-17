@@ -68,7 +68,7 @@
 
 <h2 id="label-Installation">Installation</h2>
 
-<p>Add this line to your application&#39;s Gemfile:</p>
+<p>Add this line to your application’s Gemfile:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>op_connect</span><span class='tstring_end'>&#39;</span></span>
 </code></pre>
@@ -85,7 +85,7 @@
 
 <h2 id="label-Configuration+and+Defaults">Configuration and Defaults</h2>
 
-<p>While <code>OpConnect::Client</code> accepts a range of options when creating a new client instance, OpConnect&#39;s configuration API allows you to set your configuration options at the module level. This is particularly handy if you&#39;re creating a number of client instances based on some shared defaults. Changing options affects new instances only and will not modify existing <code>OpConnect::Client</code> instances created with previous options.</p>
+<p>While <code>OpConnect::Client</code> accepts a range of options when creating a new client instance, OpConnect’s configuration API allows you to set your configuration options at the module level. This is particularly handy if you’re creating a number of client instances based on some shared defaults. Changing options affects new instances only and will not modify existing <code>OpConnect::Client</code> instances created with previous options.</p>
 
 <h3 id="label-Configuring+module+defaults">Configuring module defaults</h3>
 
@@ -105,7 +105,7 @@
 
 <h3 id="label-Using+ENV+variables">Using ENV variables</h3>
 
-<p>Default configuration values are specified in <code>OpConnect::Default</code>. Many attributes look for a default value from ENV before returning OpConnect&#39;s default.</p>
+<p>Default configuration values are specified in <code>OpConnect::Default</code>. Many attributes look for a default value from ENV before returning OpConnect’s default.</p>
 
 <p>| Variable | Description | Default | | ————————- | —————————————————————————– | ———————————————– | | <code>OP_CONNECT_ACCESS_TOKEN</code> | The API token used to authenticate the client to a 1Password Connect API. | | | <code>OP_CONNECT_API_ENDPOINT</code> | The URL of the 1Password Connect API server. | <a href="http://localhost:8080/v1">localhost:8080/v1</a> | | <code>OP_CONNECT_USER_AGENT</code> | The user-agent string the client uses when making requests. This is optional. | 1Password Connect Ruby SDK <span class='object_link'><a href="OpConnect.html#VERSION-constant" title="OpConnect::VERSION (constant)">OpConnect::VERSION</a></span> |</p>
 
@@ -286,7 +286,7 @@
 
 <h4 id="label-Check+server+for+a+heartbeat">Check server for a heartbeat</h4>
 
-<p>Ping the server to check if it&#39;s active or not.</p>
+<p>Ping the server to check if it’s active or not.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_heartbeat'>heartbeat</span>
 <span class='comment'># =&gt; true
@@ -348,13 +348,13 @@
 
 <h2 id="label-Code+of+Conduct">Code of Conduct</h2>
 
-<p>Everyone interacting in the Connect project&#39;s codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/partydrone/connect/blob/main/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+<p>Everyone interacting in the Connect project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/partydrone/connect/blob/main/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Thu Mar 17 06:03:08 2022 by
+  Generated on Thu Mar 17 06:11:02 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.27 (ruby-2.7.5).
+  0.9.27 (ruby-3.1.1).
 </div>
 
     </div>
