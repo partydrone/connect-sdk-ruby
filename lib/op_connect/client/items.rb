@@ -1,6 +1,20 @@
 module OpConnect
   class Client
     module Items
+      # Get a list of items from a vault.
+      #
+      # @param vault_id [String] The vault UUID.
+      # @param params [Hash] Query parameters.
+      # @option params [String] :filter Optionally filter the item collection
+      #   based on item title using SCIM-sytle filters.
+      #
+      # @example
+      #   client.items(vault_id: vault.id, filter: 'title eq "foo"')
+      #
+      # @see https://ldapwiki.com/wiki/SCIM%20Filtering SCIM Filtering
+      #
+      # @return [<Type>] <description>
+      #
       def list_items(vault_id:, **params)
         get("vaults/#{vault_id}/items", params: params).body.map { |item| Item.new(item) }
       end
