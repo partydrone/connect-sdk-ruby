@@ -7,6 +7,7 @@
 /spec/reports/
 /test/coverage/
 /tmp/
+/vendor/
 Gemfile.lock
 1password-credentials.json
 docker-compose.*.yml
