@@ -41,7 +41,7 @@ module OpConnect
       end
 
       def update_item(vault_id:, id:, **attributes)
-        Item.new patch("vaults/#{vault_id}/items/#{id}", body: attributes, headers: {"Content-Type": "applicatoin/json-patch+json"}).body
+        Item.new patch("vaults/#{vault_id}/items/#{id}", body: [ attributes ], headers: {}).body
       end
     end
   end
